@@ -1,0 +1,22 @@
+FROM mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2016
+
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+RUN mkdir C:/SQL2014
+
+COPY sql_server_2014_dev_sp3 C:/SQL2014
+COPY SQLServer2014-KB4583462-x64.exe C:/SQL2014/patch.exe
+
+RUN C:/SQL2014/setup.exe /q /ACTION=Install /FEATURES=SQLENGINE /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD=qGH6RFvq /SQLSVCACCOUNT='NT AUTHORITY\System' /SQLSYSADMINACCOUNTS='BUILTIN\Administrators' /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS /SQLCOLLATION=Polish_CI_AS
+
+RUN C:/SQL2014/patch.exe /quiet /ACTION=Patch /INSTANCENAME=MSSQLSERVER /IACCEPTSQLSERVERLICENSETERMS
+
+RUN rm C:/SQL2014 -recurse
+
+COPY start.ps1 /
+WORKDIR /
+
+ENV SA_PASSWORD _
+ENV ACCEPT_EULA _
+
+CMD .\start -SA_PASSWORD $env:SA_PASSWORD -ACCEPT_EULA $env:ACCEPT_EULA -Verbose
