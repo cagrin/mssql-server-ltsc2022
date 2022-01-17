@@ -1,0 +1,17 @@
+name: Basic image tests
+on:
+  workflow_dispatch:
+
+jobs:
+  ubuntu-test:
+    name: Ubuntu test
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: mcr.microsoft.com/mssql/server:2019-latest
+    steps:
+    - name: Pull image
+      run: docker pull ${{ env.IMAGE_NAME }}
+    - name: Start docker
+      run: docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password." -p 51433:1433 -d ${{ env.IMAGE_NAME }}
+    - name: Test image
+      run: sqlcmd -S localhost,51433 -d master -U sa -P Password. -Q "select 1"
