@@ -3,15 +3,42 @@ on:
   workflow_dispatch:
 
 jobs:
-  ubuntu-test:
-    name: Ubuntu test
-    runs-on: ubuntu-latest
+  sql-2016-windows-test:
+    name: SQL Server 2016 on Windows
+    runs-on: windows-2016
     env:
-      IMAGE_NAME: mcr.microsoft.com/mssql/server:2019-latest
+      IMAGE_NAME: cagrin/mssql-server-oldies:2016-latest
     steps:
     - name: Pull image
       run: docker pull ${{ env.IMAGE_NAME }}
     - name: Start docker
       run: docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password." -p 51433:1433 -d ${{ env.IMAGE_NAME }}
     - name: Test image
-      run: sqlcmd -S localhost,51433 -d master -U sa -P Password. -Q "select 1"
+      shell: pwsh
+      run: Invoke-Sqlcmd -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "Password." -Query "select 1"
+  sql-2014-windows-test:
+    name: SQL Server 2014 on Windows
+    runs-on: windows-2016
+    env:
+      IMAGE_NAME: cagrin/mssql-server-oldies:2014-latest
+    steps:
+    - name: Pull image
+      run: docker pull ${{ env.IMAGE_NAME }}
+    - name: Start docker
+      run: docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password." -p 51433:1433 -d ${{ env.IMAGE_NAME }}
+    - name: Test image
+      shell: pwsh
+      run: Invoke-Sqlcmd -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "Password." -Query "select 1"
+  sql-2012-windows-test:
+    name: SQL Server 2012 on Windows
+    runs-on: windows-2016
+    env:
+      IMAGE_NAME: cagrin/mssql-server-oldies:2012-latest
+    steps:
+    - name: Pull image
+      run: docker pull ${{ env.IMAGE_NAME }}
+    - name: Start docker
+      run: docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password." -p 51433:1433 -d ${{ env.IMAGE_NAME }}
+    - name: Test image
+      shell: pwsh
+      run: Invoke-Sqlcmd -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "Password." -Query "select 1"
