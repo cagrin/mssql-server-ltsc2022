@@ -1,0 +1,14 @@
+name: Test images
+on:
+  workflow_dispatch:
+
+jobs:
+  test-images:
+    name: Test images
+    runs-on: windows-2016
+    steps:
+    - uses: actions/checkout@master
+    - name: Test images
+      shell: pwsh
+      run: |
+        ./developer/test.ps1
