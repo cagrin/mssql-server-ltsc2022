@@ -1,11 +1,21 @@
-docker push cagrin/mssql-server-oldies:2012-latest
-docker push cagrin/mssql-server-oldies:2014-latest
-docker push cagrin/mssql-server-oldies:2016-latest
-docker push cagrin/mssql-server-oldies:2017-latest
-docker push cagrin/mssql-server-oldies:2019-latest
+function Push-Image
+{
+    param
+    (
+        [string]$Tag
+    )
 
-docker push cagrin/mssql-server-oldies:2012-latest-pl
-docker push cagrin/mssql-server-oldies:2014-latest-pl
-docker push cagrin/mssql-server-oldies:2016-latest-pl
-docker push cagrin/mssql-server-oldies:2017-latest-pl
-docker push cagrin/mssql-server-oldies:2019-latest-pl
+    docker push cagrin/mssql-server-oldies:$Tag
+}
+
+Push-Image '2012-latest'
+Push-Image '2014-latest'
+Push-Image '2016-latest'
+Push-Image '2017-latest'
+Push-Image '2019-latest'
+
+Push-Image '2012-latest-pl'
+Push-Image '2014-latest-pl'
+Push-Image '2016-latest-pl'
+Push-Image '2017-latest-pl'
+Push-Image '2019-latest-pl'
