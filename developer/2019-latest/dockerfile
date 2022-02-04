@@ -5,7 +5,7 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 RUN mkdir C:/Setup
 
 COPY en_sql_server_2019_developer_x64_dvd_baea4195 C:/Setup
-COPY SQLServer2019-KB5007182-x64.exe C:/Setup/patch.exe
+COPY SQLServer2019-KB5008996-x64.exe C:/Setup/patch.exe
 
 ARG SQLCOLLATION
 RUN Write-Host $env:SQLCOLLATION ; \

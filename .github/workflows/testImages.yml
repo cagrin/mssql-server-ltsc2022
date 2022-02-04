@@ -8,6 +8,8 @@ jobs:
     runs-on: windows-2016
     steps:
     - uses: actions/checkout@master
+    - name: Pull base image
+      run: docker pull mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2016
     - name: Test images
       shell: pwsh
       run: |

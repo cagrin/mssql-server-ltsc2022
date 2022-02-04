@@ -10,7 +10,7 @@
 |2014-latest|SQL Server 2014 Developer Edition|12.0.6433.1|2021-01-12|
 |2016-latest|SQL Server 2016 Developer Edition|13.0.6404.1|2021-10-27|
 |2017-latest|SQL Server 2017 Developer Edition|14.0.3430.2|2022-01-13|
-|2019-latest|SQL Server 2019 Developer Edition|15.0.4188.2|2021-11-22|
+|2019-latest|SQL Server 2019 Developer Edition|15.0.4198.2|2022-01-27 <span style="color:coral">*new</span>|
 
 #### Collation: ```Polish_CI_AS```
 
@@ -20,7 +20,7 @@
 |2014-latest-pl|SQL Server 2014 Developer Edition|12.0.6433.1|2021-01-12|
 |2016-latest-pl|SQL Server 2016 Developer Edition|13.0.6404.1|2021-10-27|
 |2017-latest-pl|SQL Server 2017 Developer Edition|14.0.3430.2|2022-01-13|
-|2019-latest-pl|SQL Server 2019 Developer Edition|15.0.4188.2|2021-11-22|
+|2019-latest-pl|SQL Server 2019 Developer Edition|15.0.4198.2|2022-01-27 <span style="color:coral">*new</span>|
 
 ## Configuration
 Requires the following environment flags:
