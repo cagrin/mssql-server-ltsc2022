@@ -7,7 +7,7 @@ function Build-Image
         [string]$Collation
     )
 
-    docker build --memory 4g --isolation process --tag cagrin/mssql-server-oldies:$Tag --build-arg SQLCOLLATION=$Collation ./$WorkingFolder
+    docker build --memory 4g --tag cagrin/mssql-server-oldies:$Tag --build-arg SQLCOLLATION=$Collation ./$WorkingFolder
 }
 
 Build-Image '2012-latest' '2012-latest' 'SQL_Latin1_General_CP1_CI_AS'
