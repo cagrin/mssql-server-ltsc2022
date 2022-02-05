@@ -10,7 +10,21 @@ jobs:
     - uses: actions/checkout@master
     - name: Pull base image
       run: docker pull mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2016
-    - name: Test images
+    - name: Pull latest images
+      run: |
+        docker pull cagrin/mssql-server-oldies:2012-latest
+        docker pull cagrin/mssql-server-oldies:2014-latest
+        docker pull cagrin/mssql-server-oldies:2016-latest
+        docker pull cagrin/mssql-server-oldies:2017-latest
+        docker pull cagrin/mssql-server-oldies:2019-latest
+    - name: Pull latest-pl images
+      run: |
+        docker pull cagrin/mssql-server-oldies:2012-latest-pl
+        docker pull cagrin/mssql-server-oldies:2014-latest-pl
+        docker pull cagrin/mssql-server-oldies:2016-latest-pl
+        docker pull cagrin/mssql-server-oldies:2017-latest-pl
+        docker pull cagrin/mssql-server-oldies:2019-latest-pl
+    - name: Test all images
       shell: pwsh
       run: |
         ./developer/test.ps1
