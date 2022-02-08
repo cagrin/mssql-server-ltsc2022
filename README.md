@@ -27,4 +27,4 @@ Requires the following environment flags:
 - ```ACCEPT_EULA=Y```
 - ```SA_PASSWORD=```
 
-All images are based on ```mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2016```.
+All images are based on ```mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2022```.

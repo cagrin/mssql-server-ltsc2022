@@ -5,7 +5,7 @@ function Push-Image
         [string]$Tag
     )
 
-    docker push cagrin/mssql-server-oldies:$Tag
+    docker push cagrin/mssql-server-ltsc2022:$Tag
 }
 
 Push-Image '2012-latest'

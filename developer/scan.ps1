@@ -5,7 +5,7 @@ function Invoke-ScanImage
         [string]$Tag
     )
 
-    docker scan cagrin/mssql-server-oldies:$Tag
+    docker scan cagrin/mssql-server-ltsc2022:$Tag
 }
 
 Invoke-ScanImage '2012-latest'
