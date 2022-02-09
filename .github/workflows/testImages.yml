@@ -8,17 +8,13 @@ jobs:
     runs-on: windows-2022
     steps:
     - uses: actions/checkout@master
-    - name: Pull base image
-      run: docker pull mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2022
-    - name: Pull latest images
+    - name: Pull all images
       run: |
         docker pull cagrin/mssql-server-ltsc2022:2012-latest
         docker pull cagrin/mssql-server-ltsc2022:2014-latest
         docker pull cagrin/mssql-server-ltsc2022:2016-latest
         docker pull cagrin/mssql-server-ltsc2022:2017-latest
         docker pull cagrin/mssql-server-ltsc2022:2019-latest
-    - name: Pull latest-pl images
-      run: |
         docker pull cagrin/mssql-server-ltsc2022:2012-latest-pl
         docker pull cagrin/mssql-server-ltsc2022:2014-latest-pl
         docker pull cagrin/mssql-server-ltsc2022:2016-latest-pl
