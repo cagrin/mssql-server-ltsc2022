@@ -30,8 +30,9 @@ Requires the following environment flags:
 ## Build
 
 All images are based on [.NET Framework Runtime](https://hub.docker.com/_/microsoft-dotnet-framework-runtime) in particular:
+
 |Product|Base image|
-|--- |--- |
+|--- |---|
 |SQL Server 2012 Developer Edition|mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2022|
 |SQL Server 2014 Developer Edition|mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2022|
 |SQL Server 2016 Developer Edition|mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2022|
