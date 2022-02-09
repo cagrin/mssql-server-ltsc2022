@@ -7,7 +7,7 @@ function Build-Image
         [string]$Collation
     )
 
-    docker build --memory 4g --tag cagrin/mssql-server-ltsc2022:$Tag --build-arg SQLCOLLATION=$Collation --build-arg SHARE_PATH='\\myshare' --build-arg SHARE_LOGIN='username' --build-arg SHARE_PASSWORD='password' ./$WorkingFolder
+    docker build --memory 4g --tag cagrin/mssql-server-ltsc2022:$Tag --build-arg SQLCOLLATION=$Collation --build-arg SHARE_PATH='\\192.168.1.56\Public' --build-arg SHARE_LOGIN='sa' --build-arg SHARE_PASSWORD='A.794613' ./$WorkingFolder
 }
 
 Build-Image '2012-latest' '2012-latest' 'SQL_Latin1_General_CP1_CI_AS'
