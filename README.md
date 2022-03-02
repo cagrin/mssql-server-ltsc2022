@@ -1,3 +1,7 @@
+[![version](https://img.shields.io/docker/v/cagrin/mssql-server-ltsc2022?arch=arm64&sort=date)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![docker pulls](https://img.shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
+
+
 ## Featured Tags
 
 ### Windows images only
