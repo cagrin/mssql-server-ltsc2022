@@ -16,7 +16,7 @@
 |2017-latest|SQL Server 2017 Developer Edition|14.0.3430.2|2022-01-13|
 |2019-latest|SQL Server 2019 Developer Edition|15.0.4198.2|2022-01-27|
 
-#### Collation: ```Polish_CI_AS```
+#### Collation: ```Polish_CI_AS``` <img src="https://flagicons.lipis.dev/flags/4x3/pl.svg" width="16">
 
 |Tag|Product|Version|Release date|
 |--- |--- |--- |---|
@@ -25,6 +25,16 @@
 |2016-latest-pl|SQL Server 2016 Developer Edition|13.0.6404.1|2021-10-27|
 |2017-latest-pl|SQL Server 2017 Developer Edition|14.0.3430.2|2022-01-13|
 |2019-latest-pl|SQL Server 2019 Developer Edition|15.0.4198.2|2022-01-27|
+
+#### Collation: ```Ukrainian_CI_AS``` <img src="https://flagicons.lipis.dev/flags/4x3/ua.svg" width="16">
+
+|Tag|Product|Version|Release date|
+|--- |--- |--- |---|
+|2012-latest-ua|SQL Server 2012 Developer Edition|11.0.7507.2|2021-01-12|
+|2014-latest-ua|SQL Server 2014 Developer Edition|12.0.6433.1|2021-01-12|
+|2016-latest-ua|SQL Server 2016 Developer Edition|13.0.6404.1|2021-10-27|
+|2017-latest-ua|SQL Server 2017 Developer Edition|14.0.3430.2|2022-01-13|
+|2019-latest-ua|SQL Server 2019 Developer Edition|15.0.4198.2|2022-01-27|
 
 ## Configuration
 Requires the following environment flags:
