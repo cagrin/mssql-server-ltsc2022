@@ -20,6 +20,11 @@ jobs:
         docker pull cagrin/mssql-server-ltsc2022:2016-latest-pl
         docker pull cagrin/mssql-server-ltsc2022:2017-latest-pl
         docker pull cagrin/mssql-server-ltsc2022:2019-latest-pl
+        docker pull cagrin/mssql-server-ltsc2022:2012-latest-ua
+        docker pull cagrin/mssql-server-ltsc2022:2014-latest-ua
+        docker pull cagrin/mssql-server-ltsc2022:2016-latest-ua
+        docker pull cagrin/mssql-server-ltsc2022:2017-latest-ua
+        docker pull cagrin/mssql-server-ltsc2022:2019-latest-ua
     - name: Test all images
       shell: pwsh
       run: |
