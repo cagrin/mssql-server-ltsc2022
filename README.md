@@ -1,5 +1,5 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--04--06-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
-[![docker pulls](https://img.shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--04--21-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
 ## Featured Tags
@@ -20,7 +20,7 @@
 |2014-latest...|SQL Server 2014 SP3 CU4|12.0.6433.1|2021-01-12|
 |2016-latest...|SQL Server 2016 SP3|13.0.6404.1|2021-10-27|
 |2017-latest...|SQL Server 2017 CU29|14.0.3436.1|2022-03-30|
-|2019-latest...|SQL Server 2019 CU15|15.0.4198.2|2022-01-27|
+|2019-latest...|SQL Server 2019 CU16|15.0.4223.1|2022-04-18|
 
 ## Configuration
 Requires the following environment flags:
@@ -33,7 +33,7 @@ All images are based on [.NET Framework Runtime](https://hub.docker.com/_/micros
 
 |Product|Base image|Relase date|
 |--- |--- |---|
-|SQL Server 2012<br/>SQL Server 2014<br/>SQL Server 2016|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-windowsservercore-ltsc2022|2022-03-08|
-|SQL Server 2017<br/>SQL Server 2019|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-03-08|
+|SQL Server 2012<br/>SQL Server 2014<br/>SQL Server 2016|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-windowsservercore-ltsc2022|2022-04-12|
+|SQL Server 2017<br/>SQL Server 2019|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-04-12|
 
 Built and tested on Windows 11 [Version 10.0.22000.434].
