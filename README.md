@@ -31,7 +31,7 @@ Requires the following environment flags:
 
 All images are based on [.NET Framework Runtime](https://hub.docker.com/_/microsoft-dotnet-framework-runtime) in particular:
 
-|Product|Base image|Relase date|
+|Product|Base image|Release date|
 |--- |--- |---|
 |SQL Server 2012<br/>SQL Server 2014<br/>SQL Server 2016|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-windowsservercore-ltsc2022|2022-04-12|
 |SQL Server 2017<br/>SQL Server 2019|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-04-12|
