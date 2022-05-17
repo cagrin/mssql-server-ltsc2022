@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--04--21-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--05--17-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
 [![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
@@ -33,7 +33,7 @@ All images are based on [.NET Framework Runtime](https://hub.docker.com/_/micros
 
 |Product|Base image|Release date|
 |--- |--- |---|
-|SQL Server 2012<br/>SQL Server 2014<br/>SQL Server 2016|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-windowsservercore-ltsc2022|2022-04-12|
-|SQL Server 2017<br/>SQL Server 2019|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-04-12|
+|SQL Server 2012<br/>SQL Server 2014<br/>SQL Server 2016|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-windowsservercore-ltsc2022|2022-05-11|
+|SQL Server 2017<br/>SQL Server 2019|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-05-11|
 
 Built and tested on Windows 11 [Version 10.0.22000.434].
