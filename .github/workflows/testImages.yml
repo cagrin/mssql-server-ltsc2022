@@ -7,24 +7,11 @@ jobs:
     name: Test images
     runs-on: windows-2022
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
     - name: Pull all images
+      shell: pwsh
       run: |
-        docker pull cagrin/mssql-server-ltsc2022:2012-latest
-        docker pull cagrin/mssql-server-ltsc2022:2014-latest
-        docker pull cagrin/mssql-server-ltsc2022:2016-latest
-        docker pull cagrin/mssql-server-ltsc2022:2017-latest
-        docker pull cagrin/mssql-server-ltsc2022:2019-latest
-        docker pull cagrin/mssql-server-ltsc2022:2012-latest-pl
-        docker pull cagrin/mssql-server-ltsc2022:2014-latest-pl
-        docker pull cagrin/mssql-server-ltsc2022:2016-latest-pl
-        docker pull cagrin/mssql-server-ltsc2022:2017-latest-pl
-        docker pull cagrin/mssql-server-ltsc2022:2019-latest-pl
-        docker pull cagrin/mssql-server-ltsc2022:2012-latest-ua
-        docker pull cagrin/mssql-server-ltsc2022:2014-latest-ua
-        docker pull cagrin/mssql-server-ltsc2022:2016-latest-ua
-        docker pull cagrin/mssql-server-ltsc2022:2017-latest-ua
-        docker pull cagrin/mssql-server-ltsc2022:2019-latest-ua
+        ./developer/pull.ps1
     - name: Test all images
       shell: pwsh
       run: |

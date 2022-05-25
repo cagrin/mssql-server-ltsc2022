@@ -8,20 +8,21 @@ function Push-Image
     docker push cagrin/mssql-server-ltsc2022:$Tag
 }
 
-Push-Image '2012-latest'
-Push-Image '2014-latest'
-Push-Image '2016-latest'
-Push-Image '2017-latest'
-Push-Image '2019-latest'
+function Push-Version
+{
+    param
+    (
+        [string]$Tag
+    )
 
-Push-Image '2012-latest-pl'
-Push-Image '2014-latest-pl'
-Push-Image '2016-latest-pl'
-Push-Image '2017-latest-pl'
-Push-Image '2019-latest-pl'
+    Push-Image $Tag
+    Push-Image $Tag'-pl'
+    Push-Image $Tag'-ua'
+}
 
-Push-Image '2012-latest-ua'
-Push-Image '2014-latest-ua'
-Push-Image '2016-latest-ua'
-Push-Image '2017-latest-ua'
-Push-Image '2019-latest-ua'
+Push-Version '2012-latest'
+Push-Version '2014-latest'
+Push-Version '2016-latest'
+Push-Version '2017-latest'
+Push-Version '2019-latest'
+Push-Version '2022-preview'

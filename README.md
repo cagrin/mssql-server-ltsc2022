@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--05--17-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--05--25-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
 [![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
@@ -8,9 +8,9 @@
 
 |Tags|Collation|
 |--- |---|
-|2012-latest<br/>2014-latest<br/>2016-latest<br/>2017-latest<br/>2019-latest|```SQL_Latin1_General_CP1_CI_AS```|
-|2012-latest-pl<br/>2014-latest-pl<br/>2016-latest-pl<br/>2017-latest-pl<br/>2019-latest-pl|```Polish_CI_AS``` <img src="https://flagicons.lipis.dev/flags/4x3/pl.svg" width="16">|
-|2012-latest-ua<br/>2014-latest-ua<br/>2016-latest-ua<br/>2017-latest-ua<br/>2019-latest-ua|```Ukrainian_CI_AS``` <img src="https://flagicons.lipis.dev/flags/4x3/ua.svg" width="16">|
+|2012-latest<br/>2014-latest<br/>2016-latest<br/>2017-latest<br/>2019-latest<br/>2022-preview|```SQL_Latin1_General_CP1_CI_AS```|
+|2012-latest-pl<br/>2014-latest-pl<br/>2016-latest-pl<br/>2017-latest-pl<br/>2019-latest-pl<br/>2022-preview-pl|```Polish_CI_AS``` <img src="https://flagicons.lipis.dev/flags/4x3/pl.svg" width="16">|
+|2012-latest-ua<br/>2014-latest-ua<br/>2016-latest-ua<br/>2017-latest-ua<br/>2019-latest-ua<br/>2022-preview-ua|```Ukrainian_CI_AS``` <img src="https://flagicons.lipis.dev/flags/4x3/ua.svg" width="16">|
 
 ### SQL Server Developer Edition only
 
@@ -21,6 +21,7 @@
 |2016-latest...|SQL Server 2016 SP3|13.0.6404.1|2021-10-27|
 |2017-latest...|SQL Server 2017 CU29|14.0.3436.1|2022-03-30|
 |2019-latest...|SQL Server 2019 CU16|15.0.4223.1|2022-04-18|
+|2022-preview...|SQL Server 2022 CTP2.0|16.0.600.9|2022-05-20|
 
 ## Configuration
 Requires the following environment flags:
@@ -34,6 +35,6 @@ All images are based on [.NET Framework Runtime](https://hub.docker.com/_/micros
 |Product|Base image|Release date|
 |--- |--- |---|
 |SQL Server 2012<br/>SQL Server 2014<br/>SQL Server 2016|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-windowsservercore-ltsc2022|2022-05-11|
-|SQL Server 2017<br/>SQL Server 2019|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-05-11|
+|SQL Server 2017<br/>SQL Server 2019<br/>SQL Server 2022|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8-windowsservercore-ltsc2022|2022-05-11|
 
 Built and tested on Windows 11 [Version 10.0.22000.434].
