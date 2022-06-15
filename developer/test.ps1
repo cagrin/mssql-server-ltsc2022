@@ -34,8 +34,8 @@ function Test-Version
 }
 
 Test-Version '2012-latest' '11.0.7507.2'
-Test-Version '2014-latest' '12.0.6433.1'
-Test-Version '2016-latest' '13.0.6404.1'
-Test-Version '2017-latest' '14.0.3436.1'
-Test-Version '2019-latest' '15.0.4223.1'
+Test-Version '2014-latest' '12.0.6439.10'
+Test-Version '2016-latest' '13.0.7016.1'
+Test-Version '2017-latest' '14.0.3445.2'
+Test-Version '2019-latest' '15.0.4236.7'
 Test-Version '2022-preview' '16.0.600.9'
