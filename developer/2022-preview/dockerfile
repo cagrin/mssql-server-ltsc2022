@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/framework/runtime:4.8-20220712-windowsservercore-ltsc2022
+FROM mcr.microsoft.com/dotnet/framework/runtime:4.8-20220809-windowsservercore-ltsc2022
 
 ARG SQLCOLLATION SHARE_PATH SHARE_LOGIN SHARE_PASSWORD
 RUN net use X: %SHARE_PATH% /user:"%SHARE_LOGIN%" "%SHARE_PASSWORD%" \
