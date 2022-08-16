@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--08--11-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--08--16-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
 [![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
@@ -20,7 +20,7 @@
 |2014-latest...|SQL Server 2014 SP3 CU4|12.0.6439.10|2022-06-14|
 |2016-latest...|SQL Server 2016 SP3|13.0.7016.1|2022-06-14|
 |2017-latest...|SQL Server 2017 CU30|14.0.3451.2|2022-07-13|
-|2019-latest...|SQL Server 2019 CU16|15.0.4236.7|2022-06-14|
+|2019-latest...|SQL Server 2019 CU17|15.0.4249.2|2022-08-11|
 |2022-preview...|SQL Server 2022 CTP2.0|16.0.600.9|2022-05-20|
 
 ## Configuration
