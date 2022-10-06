@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--09--29-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2022--10--06-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
 [![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
@@ -21,7 +21,7 @@
 |2016-latest...|SQL Server 2016 SP3|13.0.7016.1|2022-06-14|
 |2017-latest...|SQL Server 2017 CU31|14.0.3456.2|2022-09-20|
 |2019-latest...|SQL Server 2019 CU18|15.0.4261.1|2022-09-28|
-|2022-preview...|SQL Server 2022 RC0|16.0.900.6|2022-08-23|
+|2022-preview...|SQL Server 2022 RC1|16.0.950.9|2022-09-22|
 
 ## Configuration
 Requires the following environment flags:
