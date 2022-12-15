@@ -7,7 +7,8 @@ function Build-Image
         [string]$Collation
     )
 
-    docker build --memory 4g --tag cagrin/mssql-server-ltsc2022:$Tag --build-arg SQLCOLLATION=$Collation --build-arg SHARE_PATH='\\192.168.50.149\Public' --build-arg SHARE_LOGIN='sa' --build-arg SHARE_PASSWORD='A.794613' ./$WorkingFolder
+    $IP = (Get-NetIPAddress -PrefixOrigin Dhcp).IPAddress
+    docker build --memory 4g --tag cagrin/mssql-server-ltsc2022:$Tag --build-arg SQLCOLLATION=$Collation --build-arg SHARE_PATH="\\$IP\Public" --build-arg SHARE_LOGIN="sa" --build-arg SHARE_PASSWORD="A.794613" ./$WorkingFolder
 }
 
 function Build-Version
