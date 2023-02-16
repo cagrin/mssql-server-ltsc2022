@@ -34,7 +34,7 @@ All images are based on [.NET Framework Runtime](https://hub.docker.com/_/micros
 
 |Product|Base image|
 |--- |---|
-|SQL Server 2022<br/>SQL Server 2019<br/>SQL Server 2017|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8.1-20221213-windowsservercore-ltsc2022|
-|SQL Server 2016<br/>SQL Server 2014<br/>SQL Server 2012|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-20230110-windowsservercore-ltsc2022|
+|SQL Server 2022<br/>SQL Server 2019<br/>SQL Server 2017|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8.1-20230214-windowsservercore-ltsc2022|
+|SQL Server 2016<br/>SQL Server 2014<br/>SQL Server 2012|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-20230214-windowsservercore-ltsc2022|
 
-Built and tested on Windows 11 [Version 10.0.22000.1455].
+Built and tested on Windows 11 [Version 10.0.22000.1574].
