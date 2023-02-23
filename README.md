@@ -17,10 +17,10 @@
 |Tags prefix|Product|Version|Release date|
 |--- |--- |--- |---|
 |2022-latest...|SQL Server 2022 RTM|16.0.1000.6|2022-11-16|
-|2019-latest...|SQL Server 2019 CU18|15.0.4261.1|2022-09-28|
-|2017-latest...|SQL Server 2017 CU31|14.0.3456.2|2022-09-20|
-|2016-latest...|SQL Server 2016 SP3|13.0.7016.1|2022-06-14|
-|2014-latest...|SQL Server 2014 SP3 CU4|12.0.6439.10|2022-06-14|
+|2019-latest...|SQL Server 2019 CU18|15.0.4280.7|2023-02-14|
+|2017-latest...|SQL Server 2017 CU31|14.0.3460.9|2023-02-14|
+|2016-latest...|SQL Server 2016 SP3|13.0.7024.30|2023-02-14|
+|2014-latest...|SQL Server 2014 SP3 CU4|12.0.6444.4|2023-02-14|
 |2012-latest...|SQL Server 2012 SP4|11.0.7507.2|2021-01-12|
 
 ## Configuration
@@ -34,7 +34,7 @@ All images are based on [.NET Framework Runtime](https://hub.docker.com/_/micros
 
 |Product|Base image|
 |--- |---|
-|SQL Server 2022<br/>SQL Server 2019<br/>SQL Server 2017|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8.1-20221213-windowsservercore-ltsc2022|
-|SQL Server 2016<br/>SQL Server 2014<br/>SQL Server 2012|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-20230110-windowsservercore-ltsc2022|
+|SQL Server 2022<br/>SQL Server 2019<br/>SQL Server 2017|mcr.microsoft.com/dotnet/framework/runtime:<br/>4.8.1-20230214-windowsservercore-ltsc2022|
+|SQL Server 2016<br/>SQL Server 2014<br/>SQL Server 2012|mcr.microsoft.com/dotnet/framework/runtime:<br/>3.5-20230214-windowsservercore-ltsc2022|
 
-Built and tested on Windows 11 [Version 10.0.22000.1455].
+Built and tested on Windows 11 [Version 10.0.22000.1574].
