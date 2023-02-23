@@ -18,9 +18,9 @@
 |--- |--- |--- |---|
 |2022-latest...|SQL Server 2022 RTM|16.0.1000.6|2022-11-16|
 |2019-latest...|SQL Server 2019 CU19|15.0.4298.1|2023-02-16|
-|2017-latest...|SQL Server 2017 CU31|14.0.3456.2|2022-09-20|
-|2016-latest...|SQL Server 2016 SP3|13.0.7016.1|2022-06-14|
-|2014-latest...|SQL Server 2014 SP3 CU4|12.0.6439.10|2022-06-14|
+|2017-latest...|SQL Server 2017 CU31|14.0.3460.9|2023-02-14|
+|2016-latest...|SQL Server 2016 SP3|13.0.7024.30|2023-02-14|
+|2014-latest...|SQL Server 2014 SP3 CU4|12.0.6444.4|2023-02-14|
 |2012-latest...|SQL Server 2012 SP4|11.0.7507.2|2021-01-12|
 
 ## Configuration
