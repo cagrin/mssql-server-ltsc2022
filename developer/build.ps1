@@ -7,7 +7,7 @@ function Build-Image
         [string]$Collation
     )
 
-    $IP = (Get-NetIPAddress -PrefixOrigin Dhcp).IPAddress
+    $IP = (Get-NetIPAddress -PrefixOrigin Dhcp).IPAddress | Select-Object -First 1
     docker build --memory 4g --tag cagrin/mssql-server-ltsc2022:$Tag --build-arg SQLCOLLATION=$Collation --build-arg SHARE_PATH="\\$IP\Public" --build-arg SHARE_LOGIN="sa" --build-arg SHARE_PASSWORD="A.794613" ./$WorkingFolder
 }
 
