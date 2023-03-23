@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/framework/runtime:3.5-20230214-windowsservercore-ltsc2022
+FROM mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2022
 
 ARG SQLCOLLATION SHARE_PATH SHARE_LOGIN SHARE_PASSWORD
 RUN net use X: %SHARE_PATH% /user:"%SHARE_LOGIN%" "%SHARE_PASSWORD%" \
@@ -6,5 +6,5 @@ RUN net use X: %SHARE_PATH% /user:"%SHARE_LOGIN%" "%SHARE_PASSWORD%" \
 && X:/SQLServer2012-KB4583465-x64.exe /quiet /ACTION=Patch /INSTANCENAME=MSSQLSERVER /IACCEPTSQLSERVERLICENSETERMS
 
 COPY start.ps1 /
-ENV SA_PASSWORD=_ ACCEPT_EULA=_
-CMD powershell -Command (C:/start.ps1 -SA_PASSWORD $env:SA_PASSWORD -ACCEPT_EULA $env:ACCEPT_EULA -Verbose)
+ENV ACCEPT_EULA=_ MSSQL_SA_PASSWORD=_ 
+CMD powershell -Command (C:/start.ps1 -ACCEPT_EULA $env:ACCEPT_EULA -MSSQL_SA_PASSWORD $env:MSSQL_SA_PASSWORD -Verbose)
