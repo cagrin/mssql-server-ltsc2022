@@ -1,0 +1,20 @@
+name: Build images
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+*"
+
+jobs:
+  build-images:
+    name: Build images
+    runs-on: windows-2022
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build all images
+      shell: pwsh
+      run: |
+        ./developer/build.ps1
+    - name: Test all images
+      shell: pwsh
+      run: |
+        ./developer/test.ps1
