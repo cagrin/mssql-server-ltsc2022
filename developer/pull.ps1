@@ -20,9 +20,9 @@ function Invoke-PullVersion
     Invoke-PullImage $Tag'-ua'
 }
 
-Invoke-PullVersion '2012-latest'
-Invoke-PullVersion '2014-latest'
-Invoke-PullVersion '2016-latest'
+#Invoke-PullVersion '2012-latest'
+#Invoke-PullVersion '2014-latest'
+#Invoke-PullVersion '2016-latest'
 Invoke-PullVersion '2017-latest'
 Invoke-PullVersion '2019-latest'
 Invoke-PullVersion '2022-latest'

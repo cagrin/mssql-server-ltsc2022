@@ -6,7 +6,6 @@ RUN powershell -Command Invoke-WebRequest -Uri "https://go.microsoft.com/fwlink/
 && C:\SQL2019-SSEI-Dev.exe /ENU /Quiet /Action=Download /MediaType=CAB /MediaPath=C:/ \
 && C:\SQLServer2019-CU-x64.exe /qs /x:SQLServer2019-CU-x64 \
 && C:\SQLServer2019-DEV-x64-ENU.exe /qs /x:SQLServer2019-DEV-x64-ENU \
-#&& copy C:\SQLServer2019-DEV-x64-ENU\1033_ENU_LP\x64\Setup\SQLSUPPORT.MSI C:\SQLServer2019-CU-x64\1033_ENU_LP\x64\Setup\SQLSUPPORT.MSI \
 && powershell -Command Remove-Item -Recurse -Force C:\SQL2019-SSEI-Dev.exe, C:\SQLServer2019-DEV-x64-ENU.exe, C:\SQLServer2019-DEV-x64-ENU.box, C:\SQLServer2019-CU-x64.exe
 
 # Install

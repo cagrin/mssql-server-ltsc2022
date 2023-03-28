@@ -1,9 +1,18 @@
 FROM mcr.microsoft.com/dotnet/framework/runtime:4.8.1-windowsservercore-ltsc2022
 
-ARG SQLCOLLATION SHARE_PATH SHARE_LOGIN SHARE_PASSWORD
-RUN net use X: %SHARE_PATH% /user:"%SHARE_LOGIN%" "%SHARE_PASSWORD%" \
-&& X:/en_sql_server_2017_developer_x64_dvd_11296168/setup.exe /q /ACTION=Install /FEATURES=SQLENGINE /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD=qGH6RFvq /SQLSVCACCOUNT="NT AUTHORITY\System" /SQLSYSADMINACCOUNTS="BUILTIN\Administrators" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS /SQLCOLLATION=%SQLCOLLATION% \
-&& X:/SQLServer2017-KB5021126-x64.exe /quiet /ACTION=Patch /INSTANCENAME=MSSQLSERVER /IACCEPTSQLSERVERLICENSETERMS
+# Download and extract
+RUN powershell -Command Invoke-WebRequest -Uri "https://go.microsoft.com/fwlink/?linkid=840945" -OutFile C:\SQL2017-SSEI-Dev.exe \
+&& powershell -Command Invoke-WebRequest -Uri "https://download.microsoft.com/download/8/e/7/8e71a336-8ce9-49af-a24c-41706a6664fa/SQLServer2017-KB5021126-x64.exe" -OutFile C:\SQLServer2017-CU-x64.exe \
+&& C:\SQL2017-SSEI-Dev.exe /ENU /Quiet /Action=Download /MediaType=CAB /MediaPath=C:/ \
+&& C:\SQLServer2017-CU-x64.exe /qs /x:SQLServer2017-CU-x64 \
+&& C:\SQLServer2017-DEV-x64-ENU.exe /qs /x:SQLServer2017-DEV-x64-ENU \
+&& powershell -Command Remove-Item -Recurse -Force C:\SQL2017-SSEI-Dev.exe, C:\SQLServer2017-DEV-x64-ENU.exe, C:\SQLServer2017-DEV-x64-ENU.box, C:\SQLServer2017-CU-x64.exe
+
+# Install
+ARG SQLCOLLATION
+RUN C:\SQLServer2017-DEV-x64-ENU\setup.exe /q /ACTION=Install /FEATURES=SQLENGINE /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD=qGH6RFvq /SQLSVCACCOUNT="NT AUTHORITY\System" /SQLSYSADMINACCOUNTS="BUILTIN\Administrators" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS /SQLCOLLATION=%SQLCOLLATION% \
+&& C:\SQLServer2017-CU-x64\setup.exe /quiet /ACTION=Patch /INSTANCENAME=MSSQLSERVER /IACCEPTSQLSERVERLICENSETERMS \
+&& powershell -Command Remove-Item -Recurse -Force C:\SQLServer2017-DEV-x64-ENU, C:\SQLServer2017-CU-x64
 
 COPY start.ps1 /
 ENV ACCEPT_EULA=_ MSSQL_SA_PASSWORD=_ 
