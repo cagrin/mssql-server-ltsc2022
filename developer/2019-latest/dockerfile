@@ -1,9 +1,19 @@
 FROM mcr.microsoft.com/dotnet/framework/runtime:4.8.1-windowsservercore-ltsc2022
 
-ARG SQLCOLLATION SHARE_PATH SHARE_LOGIN SHARE_PASSWORD
-RUN net use X: %SHARE_PATH% /user:"%SHARE_LOGIN%" "%SHARE_PASSWORD%" \
-&& X:/en_sql_server_2019_developer_x64_dvd_baea4195/setup.exe /q /ACTION=Install /FEATURES=SQLENGINE /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD=qGH6RFvq /SQLSVCACCOUNT="NT AUTHORITY\System" /SQLSYSADMINACCOUNTS="BUILTIN\Administrators" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS /SQLCOLLATION=%SQLCOLLATION% \
-&& X:/SQLServer2019-KB5023049-x64.exe /quiet /ACTION=Patch /INSTANCENAME=MSSQLSERVER /IACCEPTSQLSERVERLICENSETERMS
+# Download and extract
+RUN powershell -Command Invoke-WebRequest -Uri "https://go.microsoft.com/fwlink/?linkid=866662" -OutFile C:\SQL2019-SSEI-Dev.exe \
+&& powershell -Command Invoke-WebRequest -Uri "https://download.microsoft.com/download/6/e/7/6e72dddf-dfa4-4889-bc3d-e5d3a0fd11ce/SQLServer2019-KB5023049-x64.exe" -OutFile C:\SQLServer2019-CU-x64.exe \
+&& C:\SQL2019-SSEI-Dev.exe /ENU /Quiet /Action=Download /MediaType=CAB /MediaPath=C:/ \
+&& C:\SQLServer2019-CU-x64.exe /qs /x:SQLServer2019-CU-x64 \
+&& C:\SQLServer2019-DEV-x64-ENU.exe /qs /x:SQLServer2019-DEV-x64-ENU \
+#&& copy C:\SQLServer2019-DEV-x64-ENU\1033_ENU_LP\x64\Setup\SQLSUPPORT.MSI C:\SQLServer2019-CU-x64\1033_ENU_LP\x64\Setup\SQLSUPPORT.MSI \
+&& powershell -Command Remove-Item -Recurse -Force C:\SQL2019-SSEI-Dev.exe, C:\SQLServer2019-DEV-x64-ENU.exe, C:\SQLServer2019-DEV-x64-ENU.box, C:\SQLServer2019-CU-x64.exe
+
+# Install
+ARG SQLCOLLATION
+RUN C:\SQLServer2019-DEV-x64-ENU\setup.exe /q /ACTION=Install /FEATURES=SQLENGINE /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD=qGH6RFvq /SQLSVCACCOUNT="NT AUTHORITY\System" /SQLSYSADMINACCOUNTS="BUILTIN\Administrators" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS /SQLCOLLATION=%SQLCOLLATION% \
+&& C:\SQLServer2019-CU-x64\setup.exe /quiet /ACTION=Patch /INSTANCENAME=MSSQLSERVER /IACCEPTSQLSERVERLICENSETERMS \
+&& powershell -Command Remove-Item -Recurse -Force C:\SQLServer2019-DEV-x64-ENU, C:\SQLServer2019-CU-x64
 
 COPY start.ps1 /
 ENV ACCEPT_EULA=_ MSSQL_SA_PASSWORD=_ 
