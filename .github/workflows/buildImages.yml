@@ -13,7 +13,8 @@ jobs:
     - name: Build all images
       shell: pwsh
       run: |
-        ./developer/build.ps1
+        cd developer
+        ./build.ps1
     - name: Test all images
       shell: pwsh
       run: |
