@@ -7,17 +7,12 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+*"
 
 jobs:
-  build-images:
-    name: Build images
+  build-image:
     runs-on: windows-2022
+    strategy:
+      matrix:
+        tag: [2017-latest, 2019-latest, 2022-latest]
+        collation: [SQL_Latin1_General_CP1_CI_AS, Polish_CI_AS, Ukrainian_CI_AS]
     steps:
     - uses: actions/checkout@v3
-    - name: Build all images
-      shell: pwsh
-      run: |
-        cd developer
-        ./build.ps1
-    - name: Test all images
-      shell: pwsh
-      run: |
-        ./developer/test.ps1
+    - run: docker build --memory 4g --tag cagrin/mssql-server-ltsc2022:${{ matrix.tag }} --build-arg SQLCOLLATION=${{ matrix.collation }} ./developer/${{ matrix.tag }}
