@@ -12,7 +12,7 @@ function Test-Image
     docker container stop test_image
     docker container rm test_image
     docker run --name test_image --memory 4g -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD" -p 51433:1433 -d cagrin/mssql-server-ltsc2022:$Tag
-    Start-Sleep -Second 15
+    Start-Sleep -Second 30
     Invoke-Sqlcmd -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "$MSSQL_SA_PASSWORD" -Query "IF SERVERPROPERTY('ProductVersion') <> '$ProductVersion' RAISERROR ('ProductVersion is invalid', 16, 1)"
     Invoke-Sqlcmd -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "$MSSQL_SA_PASSWORD" -Query "IF SERVERPROPERTY('Collation') <> '$Collation' RAISERROR ('Collation is invalid', 16, 1)"
 }
