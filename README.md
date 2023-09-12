@@ -17,7 +17,7 @@
 |Tags prefix|Product|Version|Release date|
 |--- |--- |--- |---|
 |2022-latest...|SQL Server 2022 CU6|16.0.4055.4|2023-07-13|
-|2019-latest...|SQL Server 2019 CU21|15.0.4316.3|2023-06-15|
+|2019-latest...|SQL Server 2019 CU22|15.0.4322.2|2023-08-14|
 |2017-latest...|SQL Server 2017 CU31|14.0.3460.9|2023-02-14|
 |2016-latest...|SQL Server 2016 SP3|13.0.7024.30|2023-02-14|
 |2014-latest...|SQL Server 2014 SP3 CU4|12.0.6444.4|2023-02-14|
