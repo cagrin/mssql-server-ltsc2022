@@ -1,4 +1,5 @@
 [![version](https://img.shields.io/badge/docker%20last%20pushed-2023--09--18-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![docker stars](https://shields.io/docker/stars/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 [![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
