@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2023--09--12-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2023--09--18-blue)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022/tags)
 [![docker pulls](https://shields.io/docker/pulls/cagrin/mssql-server-ltsc2022)](https://hub.docker.com/repository/docker/cagrin/mssql-server-ltsc2022)
 
 
@@ -16,7 +16,7 @@
 
 |Tags prefix|Product|Version|Release date|
 |--- |--- |--- |---|
-|2022-latest...|SQL Server 2022 CU7|16.0.4065.3|2023-08-10|
+|2022-latest...|SQL Server 2022 CU8|16.0.4075.1|2023-09-14|
 |2019-latest...|SQL Server 2019 CU22|15.0.4322.2|2023-08-14|
 |2017-latest...|SQL Server 2017 CU31|14.0.3460.9|2023-02-14|
 |2016-latest...|SQL Server 2016 SP3|13.0.7024.30|2023-02-14|
